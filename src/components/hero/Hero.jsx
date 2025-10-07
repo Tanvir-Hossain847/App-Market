@@ -9,7 +9,8 @@ const Hero = () => {
 
     const {apps, loading} = useApp()
     console.log(apps);
-    
+
+    const heroApps = apps.slice(0, 8);
 
     return (
         <div className="">
@@ -19,8 +20,15 @@ const Hero = () => {
             <p>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
             </div>
             <div className="text-center space-x-3">
-                <button className='btn btn-outline'> <a className='flex items-center gap-2' target='_blank' href="https://play.google.com/store/games?hl=en"><img src={playImg} alt="" /> <h1>Google Play</h1></a></button>
-                <button className='btn btn-outline'><a className='flex items-center gap-2' href="https://www.apple.com/app-store/"><img src={appImg} alt="" /> <h1>App Store</h1></a></button>
+                <button className='btn btn-outline'> 
+                    <a className='flex items-center gap-2' target='_blank' href="https://play.google.com/store/games?hl=en"><img src={playImg} alt="" /> <h1>Google Play</h1>
+                    </a>
+                    </button>
+
+                <button className='btn btn-outline'>
+                    <a className='flex items-center gap-2' target='blank' href="https://www.apple.com/app-store/"><img src={appImg} alt="" /> <h1>App Store</h1>
+                    </a>
+                    </button>
             </div>
         </div>
         <div className="my-15">
@@ -48,13 +56,13 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        <div className="text-center space-y-2 mb-15">
+        <div className="text-center space-y-2 mb-10">
             <h1 className='font-bold text-3xl'>Tranding Apps</h1>
             <p>Explore All Trending Apps on the Market developed by us</p>
         </div>
-        <div className="">
+        <div className="grid grid-cols-4 gap-6 px-10 pb-10">
             {
-                apps.map(app => <SingleApp></SingleApp>)
+                heroApps.map(app => <SingleApp app={app}></SingleApp>)
             }
         </div>
         </div>

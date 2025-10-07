@@ -4,7 +4,7 @@ import logoPng from '../../assets/logo.png'
 
 const Navber = () => {
     return (
-       <div className="navbar bg-base-100 w-11/12 mx-auto">
+       <div className="navbar bg-base-100 px-10 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -13,9 +13,9 @@ const Navber = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow primary">
-        <li><a>Home</a></li>
-        <li><a>Apps</a></li>
-        <li><a>Installation</a></li>
+        <NavLink to={'/'}>Home</NavLink>
+      <NavLink to={'/app'}>Apps</NavLink>
+      <NavLink to={'/installed'}>Installation</NavLink>
       </ul>
     </div>
     <Link to={'/'}>
