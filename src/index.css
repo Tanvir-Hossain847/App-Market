@@ -6,3 +6,18 @@
 .primary{
   font-family: "Inter", sans-serif;
 }
+
+.active{
+  background: linear-gradient(to right, #632EE3, #9F62F2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid #632EE3;
+}
+.bg-primary{
+   background: linear-gradient(to right, #632EE3, #9F62F2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-btn{
+  background: linear-gradient(to right, #632EE3, #9F62F2);
+}

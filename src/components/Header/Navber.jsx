@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router';
+import logoPng from '../../assets/logo.png'
 
 const Navber = () => {
     return (
-       <div className="navbar bg-base-100 shadow-sm">
+       <div className="navbar bg-base-100 w-11/12 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -10,23 +12,31 @@ const Navber = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow primary">
         <li><a>Home</a></li>
         <li><a>Apps</a></li>
         <li><a>Installation</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">HERO.IO</a>
+    <Link to={'/'}>
+    <div className="flex gap-2 items-center">
+      <img className='w-10' src={logoPng} alt="" />
+      <span className='bg-primary primary font-bold'>HERO.IO</span>
+      </div>
+      </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Apps</a></li>
-      <li><a>Installation</a></li>
+    <ul className="menu menu-horizontal px-1 gap-5 primary">
+      <NavLink to={'/'}>Home</NavLink>
+      <NavLink to={'/app'}>Apps</NavLink>
+      <NavLink to={'/installed'}>Installation</NavLink>
     </ul>
   </div>
   <div className="navbar-end">
-    <a href='' className="btn">Contribution</a>
+    <button className='btn bg-btn px-4 text-white'><a target='_blank' href="https://github.com/Tanvir-Hossain847">
+    <i class="fa-brands fa-github text-lg"></i>
+    Contribution
+    </a></button>
   </div>
 </div>
     );
