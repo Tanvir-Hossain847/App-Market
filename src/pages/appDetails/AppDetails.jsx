@@ -1,8 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import useApp from '../../hooks/useApp';
-import { Download, StarIcon, ThumbsUp } from 'lucide-react';
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from 'recharts';
+import Download from '../../assets/icon-downloads.png'
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { addInstallApp } from '../../utility/installFunction';
 
 const AppDetails = () => {
     const {apps} = useApp()
@@ -13,7 +14,11 @@ const AppDetails = () => {
         return <p className='text-center'>loading app details</p>
     }
     const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = oneApp
-    const {count, name} = ratings;
+
+
+    const handleInstalled = (id) =>{
+        addInstallApp(id)
+    }
 
     return (
         <div>
@@ -44,20 +49,22 @@ const AppDetails = () => {
                     </div>
                 </div>
                 <div className="">
-                    <button className='btn btn-success text-white'>
+                    <button onClick={() => handleInstalled(id)} className='btn btn-success text-white'>
                         Install Now ({size}MB)
                     </button>
                 </div>
                 </div>
             </div>
-            <div className='py-5 border-b-1 border-gray-400 mb-5 w-11/12 mx-auto'>
+            <div className='py-5 border-b-1 border-gray-400 mb-5 w-11/12 h-[500px] mx-auto'>
                 <h1 className='text-xl font-bold primary'>Ratings</h1>
-                <BarChart className='mx-auto' width={1800} height={500} data={ratings} layout='vertical'>
+                <ResponsiveContainer>
+                <BarChart className='mx-auto' data={ratings} layout='vertical'>
                     <CartesianGrid strokeDasharray="5 5"></CartesianGrid>
                 <XAxis type='number'></XAxis>
                      <YAxis type='category' dataKey="name"></YAxis>
                 <Bar dataKey="count" fill='orange' barSize={30}></Bar>
                 </BarChart>
+                </ResponsiveContainer>
             </div>
             <div className="w-11/12 mx-auto mb-5">
                 <h1 className='font-bold primary text-xl'>Description</h1>

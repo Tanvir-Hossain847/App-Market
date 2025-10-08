@@ -6,11 +6,11 @@ const useApp = () => {
 
 
     useEffect(() => {
+        setLoading(true)
         fetch("../Apps.json")
         .then(res => res.json())
-        .then(data => setApps(data)
-        .finally(() => setLoading(false))
-        )
+        .then(data => setApps(data))
+        .finally(setLoading(false))
     },[])
 
     return {apps, loading}
