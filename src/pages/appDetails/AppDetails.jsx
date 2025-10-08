@@ -1,24 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import useApp from '../../hooks/useApp';
 import Download from '../../assets/icon-downloads.png'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts';
-import { addInstallApp } from '../../utility/installFunction';
+import { addInstallApp, getInstalledApp } from '../../utility/installFunction';
 
 const AppDetails = () => {
     const {apps} = useApp()
     const {id} = useParams()
     const convertedId = parseInt(id)
+    const [buttonState, setButtonState] = useState(false)
     const oneApp = apps.find(app => app.id === convertedId)
-    if(!oneApp){
-        return <p className='text-center'>loading app details</p>
-    }
-    const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = oneApp
 
+    useEffect(() => {
+        if(!oneApp){
+            return
+        }
+
+        const localAppData = getInstalledApp()
+        const convertedAppData = localAppData.map(id => parseInt(id))
+        const isInstalled = convertedAppData.includes(oneApp.id)
+        setButtonState(isInstalled)
+    },[oneApp])
+
+    if(!oneApp){
+        return <h1>loading....</h1>
+    }
+
+    const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = oneApp
+    
 
     const handleInstalled = (id) =>{
         addInstallApp(id)
     }
+
+    const handleButtonChange = () => {
+        handleInstalled(oneApp.id)
+        setButtonState(true)
+     }
+
 
     return (
         <div>
@@ -49,8 +69,16 @@ const AppDetails = () => {
                     </div>
                 </div>
                 <div className="">
-                    <button onClick={() => handleInstalled(id)} className='btn btn-success text-white'>
-                        Install Now ({size}MB)
+                    <button onClick={() => {
+                        handleButtonChange(oneApp.id)
+                        }} className='btn btn-success text-white'>
+                        {
+                            buttonState ? (
+                                <p>Installed</p>
+                            ) : (
+                                <p>Install ({size}MB)</p>
+                            )
+                        }
                     </button>
                 </div>
                 </div>

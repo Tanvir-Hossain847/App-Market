@@ -4,6 +4,7 @@ import SingleApp from '../../components/SingleApp/SingleApp';
 import { Search } from 'lucide-react';
 import ErrorApp from '../../components/ErrorApp/ErrorApp';
 import { Link, Navigate, useNavigate } from 'react-router';
+import Loader from '../../components/loader/Loader';
 
 const App = () => {
 
@@ -25,6 +26,12 @@ const App = () => {
         return
     }
 
+    // if(searchedApps.length === 0){
+    //     return  (
+        
+    //             )
+    // }
+
     return (
         <div className="py-15">
         <div className="px-10 flex justify-between items-center pb-6">
@@ -39,22 +46,20 @@ const App = () => {
 
         <div className=''>
             { loading ? (
-                <p>Loading....</p>
+                <Loader></Loader>
             ) : searchedApps.length > 0 ? (
                 <div className="grid grid-cols-4 gap-6 px-10">
                     {
                     searchedApps.map(app => <SingleApp app={app}></SingleApp>)
                     }
-                </div>
-            ) : (
-                <div className="text-center">
+                </div>) : (
+                    <div className="text-center py-10">
                     <ErrorApp></ErrorApp>
                     <h1 className='text-5xl font-bold primary py-5'>Hey! App Not Found</h1>
                     <p className='text-gray-600 primary pb-3'>The App you are requesting is not found on our system.  please try another apps</p>
                     <button onClick={() => handleReload()} className='btn bg-btn text-white'>Go Back</button>
                 </div>
-                
-            )
+                )
             }
         </div>
         </div>
