@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useApp from '../../hooks/useApp';
 import SingleApp from '../../components/SingleApp/SingleApp';
 import { Search } from 'lucide-react';
@@ -10,15 +10,22 @@ const App = () => {
 
     const {apps, loading} = useApp();
     const [searchApp, setSearchApp] =useState("")
+    const [isDelayedLoading, setIsDelayedLoading] = useState(true)
     const term = searchApp.trim().toLocaleLowerCase()
     const searchedApps = term ? apps.filter(app => app.title.toLocaleLowerCase() .includes(term)) : apps;
     console.log(searchedApps);
     
-    // if(loading) 
-    //     return <div className="">Apps Loading....</div>
 
-    // if(searchedApps.length === 0)
-    //     return <ErrorApp></ErrorApp>
+    useEffect(() => {
+        const delay =setTimeout(() => {
+            setIsDelayedLoading(false);
+        }, 1000)
+
+        return () => clearTimeout(delay);
+    },[loading])
+
+  
+    
     const navigate = useNavigate()
 
     const handleReload = () => {
@@ -26,11 +33,6 @@ const App = () => {
         return
     }
 
-    // if(searchedApps.length === 0){
-    //     return  (
-        
-    //             )
-    // }
 
     return (
         <div className="py-15">
@@ -45,7 +47,7 @@ const App = () => {
         </div>
 
         <div className=''>
-            { loading ? (
+            { loading || isDelayedLoading ? (
                 <Loader></Loader>
             ) : searchedApps.length > 0 ? (
                 <div className="grid grid-cols-4 gap-6 px-10">
