@@ -4,6 +4,7 @@ import playImg from '../../assets/playstore.png'
 import heroImg from '../../assets/hero.png'
 import useApp from '../../hooks/useApp';
 import SingleApp from '../SingleApp/SingleApp';
+import { Link } from 'react-router';
 
 const Hero = () => {
 
@@ -32,10 +33,10 @@ const Hero = () => {
             </div>
         </div>
         <div className="my-15">
-            <img className='w-3/5 mx-auto' src={heroImg} alt="" />
+            <img className='w-3/6 mx-auto' src={heroImg} alt="" />
             <div className="bg-btn">
-                <div className="text-white text-center py-10 w-3/4 mx-auto">
-                    <h1 className='font-bold text-3xl'>Trusted by Millions, Built for You</h1>
+                <div className="text-white text-center py-10 w-3/6 mx-auto">
+                    <h1 className='font-bold text-4xl'>Trusted by Millions, Built for You</h1>
                     <div className="flex justify-between primary py-8">
                     <div className="space-y-3">
                         <p className='text-gray-200'>Total Downloads</p>
@@ -64,6 +65,9 @@ const Hero = () => {
             {
                 heroApps.map(app => <SingleApp app={app}></SingleApp>)
             }
+        </div>
+        <div className="text-center mb-10">
+            <Link to={'/app'}><button className='btn bg-btn text-white hover:scale-110 transition-all ease-in'>Show All</button></Link>
         </div>
         </div>
     );
