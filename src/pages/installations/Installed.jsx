@@ -85,7 +85,7 @@ const Installed = () => {
             <Loader></Loader>
             </div>
            ) : appData.length > 0 ? (
-            sortData.map(app => <Installedcard handleRemove={handleRemove} app={app}></Installedcard>)
+            <div className="pb-80">{sortData.map(app => <Installedcard handleRemove={handleRemove} app={app}></Installedcard>)}</div>
            ) : <div className="text-center py-10 px-10">
             
             <ErrorApp></ErrorApp>
