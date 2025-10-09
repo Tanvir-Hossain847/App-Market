@@ -1,16 +1,27 @@
-# React + Vite
+Project-Name: Hero-AppStore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Description: A safe optimized and reliable app store for your daily life. With all the trending app that makes your life easy, all in one place. Hero-AppStore containes licenced and secure and legal application, So, that no malwere can even come close to your phone. With optimal UI/UX design to insure you a premium user expirience, and fully responsive for all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+Technologies: 
+     
+1. Vite – Used as the build tool and development server for fast hot module replacement (HMR) and
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. React – Core framework used to build the UI with component-based architecture.
 
-## Expanding the ESLint configuration
+3. React Router DOM – Used for client-side routing.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Tailwind CSS – Used for utility-first styling, and responsiveness.
+
+5. DaisyUI – Used in combination with Tailwind to implement UI components.
+
+6. JavaScript (ES6+) – Used throughout the app for logic, component state, and DOM interactions.
+
+7. react-awesome-reveal – Used for the Loader
+
+8. Flat Icons – Used for the App image data
+
+9. Sweet-Alert – Used to show interective alert messages
+
+10. Font-Awesome – Used for icons
