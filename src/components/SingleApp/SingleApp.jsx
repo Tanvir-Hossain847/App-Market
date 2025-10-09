@@ -7,7 +7,7 @@ const SingleApp = ({app}) => {
     return (
         <div className=''>
             <Link to={`/appDetails/${id}`}>
-            <div className="shadow-sm h-92 p-5 bg-white rounded-md hover:translate-y-[-10px] transition-all ease-in">
+            <div className="shadow-sm h-92 p-5 bg-white rounded-md hover:translate-y-[-10px] hover:shadow-xl transition-all ease-in">
             <div className="">
                 <div className="rounded-lg py-5">
                     <img className='w-40 mx-auto' src={image} alt="" />

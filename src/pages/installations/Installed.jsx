@@ -79,7 +79,7 @@ const Installed = () => {
                 </select>
         </div>
         </div>
-            <div className="">
+            <div className="min-h-50">
            {loading || isDelayedLoading ? (
             <div className="">
             <Loader></Loader>

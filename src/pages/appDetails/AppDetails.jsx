@@ -5,12 +5,14 @@ import Download from '../../assets/icon-downloads.png'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { addInstallApp, getInstalledApp } from '../../utility/installFunction';
 import Swal from 'sweetalert2';
+import Loader from '../../components/loader/Loader';
 
 const AppDetails = () => {
     const {apps} = useApp()
     const {id} = useParams()
     const convertedId = parseInt(id)
     const [buttonState, setButtonState] = useState(false)
+    const [isDelayedLoading, setIsDelayedLoading] = useState(false)
     const oneApp = apps.find(app => app.id === convertedId)
 
     useEffect(() => {
@@ -24,8 +26,15 @@ const AppDetails = () => {
         setButtonState(isInstalled)
     },[oneApp])
 
-    if(!oneApp){
-        return <h1>loading....</h1>
+    useEffect(() => {
+        const delay = setTimeout(() => {
+            setIsDelayedLoading(true)
+        }, 500)
+        return () => clearTimeout(delay)
+    },[])
+
+    if(!oneApp || !isDelayedLoading){
+        return <div className="my-20"><Loader></Loader></div>
     }
 
     const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = oneApp

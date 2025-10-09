@@ -148,7 +148,7 @@
     "title": "Gmail",
     "companyName": "Google LLC",
     "id": 9,
-    "description": "Gmail is Google’s email service app offering secure emailing, robust spam filtering, integrated calendar & drive, smart replies, categorization, multiple account support, and offline mode.",
+    "description": "Gmail by Google is the trusted, secure, and feature-rich email app used by billions worldwide. Designed for speed, simplicity, and productivity, Gmail makes it easy to manage your email from anywhere, with powerful tools to keep your inbox organized and your information safe.",
     "size": 50.0,
     "reviews": 60000000,
     "ratingAvg": 4.4,
@@ -202,7 +202,7 @@
     "title": "Microsoft Teams",
     "companyName": "Microsoft Corporation",
     "id": 12,
-    "description": "Microsoft Teams is a collaboration app that integrates chat, video meetings, file storage, and app integration, designed for team productivity and communication within organizations.",
+    "description": "Microsoft Teams is a powerful collaboration platform that brings chat, video meetings, file storage, and app integration into one seamless workspace. Designed for teams of all sizes, Teams helps you stay connected and productive whether you’re working remotely or in the office.",
     "size": 85.0,
     "reviews": 40000000,
     "ratingAvg": 4.2,
@@ -216,11 +216,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384150.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/5968/5968830.png",
     "title": "Twitter",
     "companyName": "Twitter, Inc.",
     "id": 13,
-    "description": "Twitter is a social media platform that allows users to post short messages called tweets, follow others, and engage in real-time conversations on a wide range of topics and news.",
+    "description": "Twitter is the world’s go-to social media platform for real-time news, trends, and conversations. Follow your favorite people, brands, and topics to stay informed and connected with a global community.",
     "size": 50.0,
     "reviews": 90000000,
     "ratingAvg": 4.0,
@@ -234,11 +234,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384160.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/3536/3536505.png",
     "title": "LinkedIn",
     "companyName": "LinkedIn Corporation",
     "id": 14,
-    "description": "LinkedIn is a professional networking platform that enables users to connect with colleagues, search for jobs, share professional content, and develop career opportunities.",
+    "description": "LinkedIn is the world’s largest professional networking platform, connecting over 900 million users across industries and careers. Whether you’re job hunting, recruiting, learning new skills, or building your professional brand, LinkedIn helps you move your career forward.",
     "size": 60.0,
     "reviews": 20000000,
     "ratingAvg": 4.2,
@@ -252,11 +252,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384170.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/5968/5968795.png",
     "title": "Pinterest",
     "companyName": "Pinterest, Inc.",
     "id": 15,
-    "description": "Pinterest is a visual discovery and bookmarking app where users can find and save ideas for recipes, fashion, home decor, and more via images and videos.",
+    "description": "Pinterest is a visual discovery platform where you can find and save creative ideas for everything—from home decor and fashion to recipes, workouts, and DIY projects. Whether you're planning a dream wedding, redecorating your space, or just exploring your interests, Pinterest helps you turn inspiration into action.",
     "size": 55.0,
     "reviews": 10000000,
     "ratingAvg": 4.4,
@@ -270,11 +270,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384190.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/5968/5968804.png",
     "title": "Telegram",
     "companyName": "Telegram FZ-LLC",
     "id": 16,
-    "description": "Telegram is a cloud-based messaging app focused on speed and security, allowing users to send text, voice, photos, videos, and files, create group chats, and use bots with encryption features.",
+    "description": "Telegram is a powerful, cloud-based messaging app focused on speed, privacy, and security. It’s ideal for both private chats and large communities, offering advanced features while keeping your data safe.",
     "size": 35.0,
     "reviews": 60000000,
     "ratingAvg": 4.5,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384200.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/732/732228.png",
     "title": "Netflix",
     "companyName": "Netflix, Inc.",
     "id": 17,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384210.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/3291/3291668.png",
     "title": "Dropbox",
     "companyName": "Dropbox, Inc.",
     "id": 18,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384220.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/5968/5968523.png",
     "title": "Google Drive",
     "companyName": "Google LLC",
     "id": 19,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384230.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/10096/10096351.png",
     "title": "Amazon Shopping",
     "companyName": "Amazon Mobile LLC",
     "id": 20,
@@ -360,7 +360,7 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384240.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/5969/5969324.png",
     "title": "Uber",
     "companyName": "Uber Technologies, Inc.",
     "id": 21,
@@ -378,11 +378,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384250.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/4494/4494647.png",
     "title": "Airbnb",
     "companyName": "Airbnb, Inc.",
     "id": 22,
-    "description": "Airbnb allows users to find and book unique accommodations and experiences worldwide, including homes, apartments, and boutique hotels, with secure payments and communication with hosts.",
+    "description": "Airbnb is a trusted marketplace that connects travelers with local hosts around the world. Whether you're looking for a cozy apartment, a beachfront villa, or a unique experience led by locals, Airbnb makes it easy to find accommodations and adventures that match your style and budget.",
     "size": 55.0,
     "reviews": 25000000,
     "ratingAvg": 4.3,
@@ -396,11 +396,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384260.png",
+    "image": "https://cdn-icons-png.flaticon.com/128/3670/3670157.png",
     "title": "Discord",
     "companyName": "Discord Inc.",
     "id": 23,
-    "description": "Discord is a voice, video, and text chat app designed for creating communities, with features like private servers, channels, live streaming, bots, and integrations for gaming and social groups.",
+    "description": "Discord is a free voice, video, and text communication app used by millions to talk and hang out with friends, communities, and creators. Originally built for gamers, Discord has evolved into a space where anyone can build a community around shared interests.",
     "size": 65.0,
     "reviews": 50000000,
     "ratingAvg": 4.6,
@@ -414,11 +414,11 @@
     ]
   },
   {
-    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384270.png",
-    "title": "TikTok Lite",
+    "image": "https://cdn-icons-png.flaticon.com/128/831/831268.png",
+    "title": "Weather",
     "companyName": "ByteDance Ltd.",
     "id": 24,
-    "description": "TikTok Lite is a lightweight version of TikTok for users with limited data or slower devices, delivering a simplified experience for watching and sharing short videos with essential features and smaller storage requirements.",
+    "description": "Weather App is your sleek and reliable companion for real-time weather updates, forecasts, and climate insights—anytime, anywhere. Whether you're planning your day, traveling, or just curious about the skies, our app keeps you informed with accurate data and a beautifully simple interface.",
     "size": 15.0,
     "reviews": 4000000,
     "ratingAvg": 4.0,

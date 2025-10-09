@@ -11,10 +11,31 @@ const App = () => {
     const {apps, loading} = useApp();
     const [searchApp, setSearchApp] =useState("")
     const [isDelayedLoading, setIsDelayedLoading] = useState(true)
-    const term = searchApp.trim().toLocaleLowerCase()
-    const searchedApps = term ? apps.filter(app => app.title.toLocaleLowerCase() .includes(term)) : apps;
-    console.log(searchedApps);
+    const [loadApp, setLoadApp] = useState(null)
     
+    useEffect(() => {
+        if(!loading){
+            setLoadApp(apps)
+        }
+    },[apps, loading])
+    
+    useEffect(() => {
+        const term = searchApp.trim().toLocaleLowerCase()
+        
+        setLoadApp(null)
+
+        const delay = setTimeout(() => {
+            if(!term){
+                setLoadApp(apps)
+            }
+            else{
+                const searchedApps = term ? apps.filter(app => app.title.toLocaleLowerCase() .includes(term)) : apps;
+
+                setLoadApp(searchedApps)
+            }
+        }, 300)
+        return () => clearTimeout(delay)
+    }, [searchApp, apps])
 
     useEffect(() => {
         const delay =setTimeout(() => {
@@ -41,7 +62,7 @@ const App = () => {
                 <p className='primary text-gray-500 py-3'>Explore All Apps on the Market developed by us. We code for Millions</p>
             </div>
         <div className="px-10 flex justify-between items-center pb-6">
-            <h2 className='md:text-2xl text-lg font-bold primary'>({searchedApps.length}) Apps Found</h2>
+            <h2 className='md:text-2xl text-lg font-bold primary'>({loadApp?.length || 0}) Apps Found</h2>
             <div className="">
                 <label className="input">
                     <Search></Search>
@@ -51,12 +72,12 @@ const App = () => {
         </div>
 
         <div className=''>
-            { loading || isDelayedLoading ? (
+            { loading || isDelayedLoading || loadApp === null ? (
                 <Loader></Loader>
-            ) : searchedApps.length > 0 ? (
+            ) : loadApp.length > 0 ? (
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 px-10">
                     {
-                    searchedApps.map(app => <SingleApp app={app}></SingleApp>)
+                    loadApp.map(app => <SingleApp app={app}></SingleApp>)
                     }
                 </div>) : (
                     <div className="text-center py-10">
