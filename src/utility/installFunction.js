@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const getInstalledApp = () => {
 
 
@@ -19,7 +21,12 @@ const addInstallApp = (id) => {
     const installedAppData = getInstalledApp()
 
     if(installedAppData.includes(id)){
-        alert("App Alredy Installed")
+        Swal.fire({
+            title: "Error",
+            text: 'App Already Installed',
+            icon: 'info',
+            confirmButtonText: "OK"
+        })
     }
     else{
         installedAppData.push(id)

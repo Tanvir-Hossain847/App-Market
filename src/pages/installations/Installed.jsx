@@ -65,7 +65,11 @@ const Installed = () => {
 
     return (
         <div className='min-h-105'>
-            <div className="px-10 flex justify-between items-center py-6">
+            <div className="primary text-center py-15">
+                <h1 className='text-5xl font-bold pb-3'>Your Installed Apps</h1>
+                <p className='text-gray-500'>Explore All Trending Apps on the Market developed by us</p>
+            </div>
+            <div className="md:px-10 px-5 flex justify-between items-center py-6">
             <h2 className='text-2xl font-bold primary'>({sortData.length}) Apps Found</h2>
             <div className="">
                 <select onChange={e => setSort(e.target.value)} defaultValue="Sort" className="select">

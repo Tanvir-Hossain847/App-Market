@@ -1,6 +1,7 @@
 import React from 'react';
 import downloadIcon from '../../assets/icon-downloads.png'
 import ratingIcon from '../../assets/icon-ratings.png'
+import Swal from 'sweetalert2';
 
 const Installedcard = ({app, handleRemove}) => {
     
@@ -8,7 +9,7 @@ const Installedcard = ({app, handleRemove}) => {
 
     return (
         <div>
-            <div className="w-11/12 mx-auto h-25 flex justify-between items-center bg-base-100 my-5 px-10 rounded-md">
+            <div className="w-11/12 mx-auto h-25 flex justify-between items-center bg-base-100 my-5 md:px-10 px-5 rounded-md">
             <div className="flex gap-5 items-center">
             <div className="">
                 <img className='w-15' src={image} alt="" />
@@ -29,7 +30,15 @@ const Installedcard = ({app, handleRemove}) => {
             </div>
             </div>
             <div className="">
-                <button onClick={() => handleRemove(id)} className='btn btn-success text-white'>Uninstall</button>
+                <button onClick={() => {
+                    Swal.fire({
+                        title:'Uninstalled',
+                        text:"App Succesfully Uninstalled",
+                        icon: 'success',
+                        confirmButtonText: "Go Back"                        
+                    })
+                    handleRemove(id)} 
+                }className='btn btn-success text-white'>Uninstall</button>
             </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 
 const Hero = () => {
 
-    const {apps, loading} = useApp()
+    const {apps} = useApp()
     console.log(apps);
 
     const heroApps = apps.slice(0, 8);
@@ -35,7 +35,7 @@ const Hero = () => {
         <div className="my-15">
             <img className='w-3/6 mx-auto' src={heroImg} alt="" />
             <div className="bg-btn">
-                <div className="text-white text-center py-10 w-3/6 mx-auto">
+                <div className="text-white text-center py-10 md:w-3/6 w-11/12 mx-auto">
                     <h1 className='font-bold text-4xl'>Trusted by Millions, Built for You</h1>
                     <div className="flex justify-between primary py-8">
                     <div className="space-y-3">
@@ -61,7 +61,7 @@ const Hero = () => {
             <h1 className='font-bold text-3xl'>Tranding Apps</h1>
             <p>Explore All Trending Apps on the Market developed by us</p>
         </div>
-        <div className="grid grid-cols-4 gap-6 px-10 pb-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 px-10 pb-10">
             {
                 heroApps.map(app => <SingleApp app={app}></SingleApp>)
             }

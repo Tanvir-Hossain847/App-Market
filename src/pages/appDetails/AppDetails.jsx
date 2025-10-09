@@ -4,6 +4,7 @@ import useApp from '../../hooks/useApp';
 import Download from '../../assets/icon-downloads.png'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { addInstallApp, getInstalledApp } from '../../utility/installFunction';
+import Swal from 'sweetalert2';
 
 const AppDetails = () => {
     const {apps} = useApp()
@@ -42,34 +43,40 @@ const AppDetails = () => {
 
     return (
         <div>
-            <div className="flex justify-between w-11/12 mx-auto gap-10 my-5 border-b-1 border-gray-400 py-10">
+            <div className="flex md:flex-row flex-col justify-between w-11/12 mx-auto gap-10 my-5 border-b-1 border-gray-400 py-10">
                 <div className="">
-                    <img className='w-85' src={image} alt="" />
+                    <img className='md:w-85 w-40 mx-auto' src={image} alt="" />
                 </div>
-                <div className="flex-1 primary py-2">
+                <div className="flex-1 primary py-2 md:text-left text-center">
                     <div className="">
                     <h1 className='text-4xl font-bold pb-1'>{title}</h1>
                     <p className='border-b-1 border-gray-400 pb-5'>Devoloped By: <span className='bg-primary'>{companyName}</span></p>
                 </div>
-                <div className="flex gap-20 my-8">
+                <div className="flex items-center md:gap-20 md:w-3/5 justify-between my-8">
                     <div className="">
                         <i class="fa-solid fa-download text-green-500 text-3xl"></i>
                         <p className='py-2 text-gray-600'>Downloads</p>
-                        <h1 className='text-4xl font-bold'>{Math.floor(downloads / 100000000)} M</h1>
+                        <h1 className='lg:text-4xl md:text-3xl text-2xl font-bold'>{Math.floor(downloads / 100000000)} M</h1>
                     </div>
                     <div className="">
                         <i class="fa-solid fa-star text-amber-500 text-3xl"></i>
                         <p className='py-2 text-gray-600'>Avarage Rating</p>
-                        <h1 className='text-4xl font-bold'>{ratingAvg}</h1>
+                        <h1 className='lg:text-4xl md:text-3xl text-2xl font-bold'>{ratingAvg}</h1>
                     </div>
                     <div className="">
                        <i class="fa-solid fa-thumbs-up text-purple-600 text-3xl"></i>
                         <p className='py-2 text-gray-600'>Total Review</p>
-                        <h1 className='text-4xl font-bold'>{Math.floor(reviews / 100000)} K</h1>
+                        <h1 className='lg:text-4xl md:text-3xl text-2xl font-bold'>{Math.floor(reviews / 100000)} K</h1>
                     </div>
                 </div>
-                <div className="">
+                <div className="justify-center">
                     <button onClick={() => {
+                        Swal.fire({
+                            title: 'Installed',
+                            text: 'App Succesfully Installed',
+                            icon: 'success',
+                            confirmButtonText:"OK"
+                        })
                         handleButtonChange(oneApp.id)
                         }} className='btn btn-success text-white'>
                         {

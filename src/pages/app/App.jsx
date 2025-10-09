@@ -35,13 +35,17 @@ const App = () => {
 
 
     return (
-        <div className="py-15">
+        <div className="py-8">
+            <div className="text-center py-10">
+                <h1 className='text-5xl primary font-bold'>Our All Applications</h1>
+                <p className='primary text-gray-500 py-3'>Explore All Apps on the Market developed by us. We code for Millions</p>
+            </div>
         <div className="px-10 flex justify-between items-center pb-6">
-            <h2 className='text-2xl font-bold primary'>({searchedApps.length}) Apps Found</h2>
+            <h2 className='md:text-2xl text-lg font-bold primary'>({searchedApps.length}) Apps Found</h2>
             <div className="">
                 <label className="input">
                     <Search></Search>
-  <input value={searchApp} onChange={(e) => setSearchApp(e.target.value)} type="search" className="focus:outline-none focus:ring-0 focus:w-80 transition-all ease-in duration-500" placeholder="Search" />
+  <input value={searchApp} onChange={(e) => setSearchApp(e.target.value)} type="search" className="focus:outline-none focus:ring-0 md:focus:w-80 transition-all ease-in duration-500" placeholder="Search" />
 </label>
             </div>
         </div>
@@ -50,7 +54,7 @@ const App = () => {
             { loading || isDelayedLoading ? (
                 <Loader></Loader>
             ) : searchedApps.length > 0 ? (
-                <div className="grid grid-cols-4 gap-6 px-10">
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 px-10">
                     {
                     searchedApps.map(app => <SingleApp app={app}></SingleApp>)
                     }
