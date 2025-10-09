@@ -77,7 +77,7 @@ const App = () => {
             ) : loadApp.length > 0 ? (
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 px-10">
                     {
-                    loadApp.map(app => <SingleApp app={app}></SingleApp>)
+                    loadApp.map(app => <SingleApp key={app.id} app={app}></SingleApp>)
                     }
                 </div>) : (
                     <div className="text-center py-10">

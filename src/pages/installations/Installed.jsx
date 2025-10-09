@@ -73,9 +73,9 @@ const Installed = () => {
             <h2 className='text-2xl font-bold primary'>({sortData.length}) Apps Found</h2>
             <div className="">
                 <select onChange={e => setSort(e.target.value)} defaultValue="Sort" className="select">
-                <option value={"none"}>Sort</option>
-                <option value={"lower-higher"}>By: Downloads <ArrowUp></ArrowUp></option>
-                <option value={"higher-lower"}>By: Downloads <ArrowDown></ArrowDown></option>
+                <option value={"none"}>Sort By:</option>
+                <option value={"lower-higher"}>Downloads <ArrowUp></ArrowUp></option>
+                <option value={"higher-lower"}>Downloads <ArrowDown></ArrowDown></option>
                 </select>
         </div>
         </div>

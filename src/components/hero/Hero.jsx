@@ -63,7 +63,7 @@ const Hero = () => {
         </div>
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 px-10 pb-10">
             {
-                heroApps.map(app => <SingleApp app={app}></SingleApp>)
+                heroApps.map(app => <SingleApp key={app.id} app={app}></SingleApp>)
             }
         </div>
         <div className="text-center mb-10">

@@ -34,7 +34,7 @@ const Navber = () => {
   </div>
   <div className="navbar-end">
     <button className='btn bg-btn px-4 text-white'><a target='_blank' href="https://github.com/Tanvir-Hossain847">
-    <i class="fa-brands fa-github text-lg"></i>
+    <i className="fa-brands fa-github text-lg"></i>
     Contribution
     </a></button>
   </div>
