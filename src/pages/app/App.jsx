@@ -73,7 +73,7 @@ const App = () => {
 
         <div className=''>
             { loading || isDelayedLoading || loadApp === null ? (
-                <Loader></Loader>
+                <div className="my-20"><Loader></Loader></div>
             ) : loadApp.length > 0 ? (
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-6 px-10">
                     {
