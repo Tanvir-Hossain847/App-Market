@@ -57,12 +57,12 @@ const App = () => {
 
     return (
         <div className="py-8">
-            <div className="text-center py-10">
+            <div className="text-center py-10 px-5">
                 <h1 className='text-5xl primary font-bold'>Our All Applications</h1>
                 <p className='primary text-gray-500 py-3'>Explore All Apps on the Market developed by us. We code for Millions</p>
             </div>
         <div className="px-10 flex justify-between items-center pb-6">
-            <h2 className='md:text-2xl text-lg font-bold primary'>({loadApp?.length || 0}) Apps Found</h2>
+            <h2 className='md:text-2xl text-[16px] font-bold primary'>({loadApp?.length || 0}) Apps Found</h2>
             <div className="">
                 <label className="input">
                     <Search></Search>
@@ -80,11 +80,13 @@ const App = () => {
                     loadApp.map(app => <SingleApp key={app.id} app={app}></SingleApp>)
                     }
                 </div>) : (
-                    <div className="text-center py-10">
+                    <div className="text-center py-10 px-10">
+                    
                     <ErrorApp></ErrorApp>
                     <h1 className='text-5xl font-bold primary py-5'>Hey! App Not Found</h1>
                     <p className='text-gray-600 primary pb-3'>The App you are requesting is not found on our system.  please try another apps</p>
                     <button onClick={() => handleReload()} className='btn bg-btn text-white'>Go Back</button>
+
                 </div>
                 )
             }

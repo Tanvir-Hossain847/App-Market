@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
         </div>
         <div className="my-15">
-            <img className='w-3/6 mx-auto' src={heroImg} alt="" />
+            <img className='md:w-3/6 w-3/4 mx-auto' src={heroImg} alt="" />
             <div className="bg-btn">
                 <div className="text-white text-center py-10 md:w-3/6 w-11/12 mx-auto">
                     <h1 className='font-bold text-4xl'>Trusted by Millions, Built for You</h1>

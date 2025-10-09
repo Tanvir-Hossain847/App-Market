@@ -65,12 +65,12 @@ const Installed = () => {
 
     return (
         <div className='min-h-105'>
-            <div className="primary text-center py-15">
+            <div className="primary text-center py-15 px-5">
                 <h1 className='text-5xl font-bold pb-3'>Your Installed Apps</h1>
                 <p className='text-gray-500'>Explore All Trending Apps on the Market developed by us</p>
             </div>
             <div className="md:px-10 px-5 flex justify-between items-center py-6">
-            <h2 className='text-2xl font-bold primary'>({sortData.length}) Apps Found</h2>
+            <h2 className='text-xl font-bold primary'>({sortData.length}) Apps Found</h2>
             <div className="">
                 <select onChange={e => setSort(e.target.value)} defaultValue="Sort" className="select">
                 <option value={"none"}>Sort By:</option>
@@ -86,10 +86,12 @@ const Installed = () => {
             </div>
            ) : appData.length > 0 ? (
             sortData.map(app => <Installedcard handleRemove={handleRemove} app={app}></Installedcard>)
-           ) : <div className="text-center py-10">
+           ) : <div className="text-center py-10 px-10">
+            
             <ErrorApp></ErrorApp>
             <h1 className='text-5xl font-bold primary py-2'>No App Installed</h1>
             <p className='text-gray-500 primary'>No App Installed Yet</p>
+
            </div>
            }
            </div>
